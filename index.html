@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+	<title>Focus and Blur</title>
+	<script type = "text/javascript" src="angular.min.js"></script>
+	<script type = "text/javascript" src="app.js"></script>
+</head>
+
+<body>
+	<div ng-controller="MainController as main">
+		<p>Aesop is looking at you:</p>
+		<p>
+			<input type = "text"
+			ng-model="main.user.name"
+			ng-focus="main.sayHello()"
+			ng-blur="main.bye()">
+		</p>
+		<hr/>
+		<p>{{ main.message }}</p>
+	</div>
+</body>
+</html>
